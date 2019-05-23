@@ -1,18 +1,57 @@
-public interface IList {
+/**
+ * It is the interface class
+ */
+public interface IList<T> {
 
-    void add(int index, int value);
+    /**
+     * Add node method
+     *
+     * @param index, it is the int index
+     * @param value, it is the T generic value
+     */
+    void add(int index, T value);
 
-    void addFirst(int value);
+    /**
+     * Add first method
+     *
+     * @param value, it is the value to be added at first
+     */
+    void addFirst(T value);
 
-    void addLast(int value);
+    /**
+     * Add last method
+     *
+     * @param value, it is the value to be added at last
+     */
+    void addLast(T value);
 
+    /**
+     * Remove node method
+     *
+     * @param index, it removes the head node
+     */
     void remove(int index);
 
+    /**
+     * Remove first node method
+     */
     void removeFirst();
 
+    /**
+     * Remove last node method
+     */
     void removeLast();
 
+    /**
+     * Print the values method
+     */
     void printList();
 
+    /**
+     * It gets the index of specific node
+     *
+     * @param index, it is the index
+     * @return the node value
+     */
     Node getIndex(int index);
 }

@@ -1,9 +1,19 @@
-public class Node {
+/**
+ * It is the node class
+ */
+public class Node<T> {
     Node next;
-    int value;
+    Node previous;
+    T value;
 
-    public Node(int value) {
+    /**
+     * It is the Constructor class
+     *
+     * @param value, it is the generic data type value
+     */
+    public Node(T value) {
         this.value = value;
         this.next = null;
+        this.previous = null;
     }
 }
