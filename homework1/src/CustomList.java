@@ -1,7 +1,7 @@
 /**
  * CustomList class
  */
-public class CustomList implements IList {
+public class CustomList<T> implements IList {
     Node head;
     Node tail;
 
@@ -57,6 +57,7 @@ public class CustomList implements IList {
         Node newNode = new Node(value);
         if (tail == null) {
             tail = newNode;
+            head = newNode;
         } else {
             tail.next = newNode;
             newNode.previous = tail;
@@ -126,5 +127,25 @@ public class CustomList implements IList {
             currentNode = currentNode.next;
         }
         return currentNode;
+    }
+
+    /**
+     * Method to getFirst node
+     *
+     * @return
+     */
+    @Override
+    public Node getFirst() {
+        return head;
+    }
+
+    /**
+     * Method to getLast node
+     *
+     * @return
+     */
+    @Override
+    public Node getLast() {
+        return tail;
     }
 }
